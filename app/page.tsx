@@ -1,103 +1,125 @@
-import Image from "next/image";
+import HeroSection from "./components/HeroSection";
+import JourneyInputSection from "./components/JourneyInputSection";
+import EmotionExplorer from "./components/EmotionExplorer";
+import TouchpointAnalyzer from "./components/TouchpointAnalyzer";
+import AIInsightRecommender from "./components/AIInsightRecommender";
+import ExportJourneySection from "./components/ExportJourneySection";
+import Footer from "./components/Footer";
+import React from "react";
+
+const cards = [
+  {
+    key: 1,
+    title: "Awareness",
+    description: "User hears about the product from a friend or ad.",
+    touchpoints: ["Word of Mouth", "Google Search"],
+    emotion: "🥱 Curious",
+    painPoint: "No major issues – Working well",
+  },
+  {
+    key: 2,
+    title: "Consideration",
+    description: "User evaluates different options and compares features.",
+    touchpoints: ["Website", "Social Media"],
+    emotion: "🤔 Evaluative",
+    painPoint: "Overwhelmed by choices",
+  },
+  {
+    key: 3,
+    title: "Decision",
+    description: "User commits and takes action to sign up or purchase.",
+    touchpoints: ["Signup Form", "Checkout Page"],
+    emotion: "🎉 Excited",
+    painPoint: "Signup process is a bit long",
+  },
+  {
+    key: 4,
+    title: "Onboarding",
+    description: "User goes through onboarding and invites teammates.",
+    touchpoints: ["Welcome Email", "Product Tour"],
+    emotion: "🧭 Guided",
+    painPoint: "Misses product features",
+  },
+  {
+    key: 5,
+    title: "Exploration",
+    description: "User explores features and hits usage limits or trials.",
+    touchpoints: ["Dashboard", "Feature Trial"],
+    emotion: "🔍 Interested",
+    painPoint: "Feature limits confusing",
+  },
+  {
+    key: 6,
+    title: "Conversion",
+    description: "User talks to sales, negotiates pricing, or upgrades plan.",
+    touchpoints: ["Sales Call", "Pricing Page"],
+    emotion: "💰 Committed",
+    painPoint: "Unclear pricing tiers",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans">
+      <HeroSection />
+      <JourneyInputSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* User Journey Stages Section */}
+      <section className="py-16 px-6 bg-gray-950">
+        <h2 className="text-3xl font-semibold mb-6 text-center">User Journey Stages</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {cards.map((card) => (
+            <div
+              key={card.key}
+              className="w-[280px] min-h-[420px] rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-md shadow-md hover:shadow-lg hover:scale-[1.02] transition duration-300"
+            >
+              <h2 className="text-white text-xl font-semibold mb-2">
+                {card.key}. {card.title}
+              </h2>
+              <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                {card.description}
+              </p>
+              <div className="mb-2">
+                <p className="text-white font-medium mb-1">Touchpoints</p>
+                <div className="flex flex-wrap gap-2">
+                  {card.touchpoints.map((item: string, i: number) => (
+                    <span
+                      key={i}
+                      className="bg-gradient-to-r from-blue-600 to-cyan-400 text-white text-xs px-3 py-1 rounded-full font-medium transition-transform duration-200 hover:scale-105"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-4">
+                <p className="text-white font-medium">Customer Emotion</p>
+                <p className="text-gray-300 text-sm mt-1">{card.emotion}</p>
+              </div>
+              <div className="mt-4">
+                <p className="text-white font-medium">Pain Points</p>
+                <div className="mt-1 bg-green-800/90 border border-green-400 text-green-200 text-sm px-3 py-2 rounded-lg">
+                  {card.painPoint}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Emotion Explorer Section */}
+      <EmotionExplorer />
+
+      {/* Touchpoint Analyzer Section */}
+      <TouchpointAnalyzer />
+
+      <AIInsightRecommender />
+
+      <ExportJourneySection />
+
+      <Footer />
+
+      {/* Add back other sections here if needed */}
+    </main>
   );
 }
