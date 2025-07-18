@@ -2,42 +2,34 @@ import React from "react";
 
 const AIInsightRecommender = () => (
   <section className="mt-24 px-4 md:px-16 text-white">
-    <h2 className="text-3xl md:text-4xl font-semibold text-center mb-6">
-      AI Insight Recommender
+    <div className="w-full max-w-md mx-auto">
+      <img src="/assets/emotional_triggers.svg" alt="Emotional Triggers" />
+    </div>
+    <h2 className="text-3xl font-bold text-orange-500 text-center mt-16 mb-2">
+      AI-Powered Suggestions
     </h2>
-    <p className="text-center max-w-3xl mx-auto text-gray-400 mb-10">
-      Generate actionable suggestions from AI based on user pain points and emotions.
+    <p className="text-center text-black/80 text-lg mb-8">
+      Smart insights generated from user pain points and journey data.
     </p>
-    <div className="grid md:grid-cols-3 gap-6">
-      {[
-        {
-          title: "Merge Pricing Tiers",
-          description: "Simplify decision-making and reduce user drop-off at conversion.",
-          icon: "🪙"
-        },
-        {
-          title: "Clarify Feature Value",
-          description: "Add tooltips or highlight walkthroughs during feature trials.",
-          icon: "💡"
-        },
-        {
-          title: "Offer Onboarding Checklist",
-          description: "Guide users through a clear, goal-oriented first session.",
-          icon: "📋"
-        }
-      ].map((tip, i) => (
-        <div
-          key={i}
-          className="rounded-xl p-6 bg-white/10 backdrop-blur-md border border-white/10 text-white transition duration-300 hover:scale-105"
-        >
-          <div className="text-xl font-semibold flex items-center gap-2 mb-2">
-            <span className="text-2xl">{tip.icon}</span> {tip.title}
-          </div>
-          <p className="text-sm text-gray-300">
-            {tip.description}
-          </p>
-        </div>
-      ))}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 px-4">
+      <div className="flex flex-col items-center text-center bg-white shadow-md rounded-xl p-4">
+        <div className="text-3xl mb-2">🌙</div>
+        <p className="text-black font-medium">
+          Simplify decision-making and reduce user drop-off at conversion.
+        </p>
+      </div>
+      <div className="flex flex-col items-center text-center bg-white shadow-md rounded-xl p-4">
+        <div className="text-3xl mb-2">💡</div>
+        <p className="text-black font-medium">
+          Add tooltips or highlight walkthroughs during feature trials.
+        </p>
+      </div>
+      <div className="flex flex-col items-center text-center bg-white shadow-md rounded-xl p-4">
+        <div className="text-3xl mb-2">📋</div>
+        <p className="text-black font-medium">
+          Guide users through a clear, goal-oriented first session.
+        </p>
+      </div>
     </div>
   </section>
 );

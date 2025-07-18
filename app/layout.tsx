@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import JourneyNavbar from "./components/JourneyNavbar";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +13,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="antialiased">
+      <body className="bg-white text-gray-900">
+        <JourneyNavbar />
         {children}
       </body>
     </html>

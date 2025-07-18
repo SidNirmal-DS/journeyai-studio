@@ -1,26 +1,33 @@
 import React from "react";
+import Image from "next/image";
 
-const Footer = () => (
-  <footer className="mt-32 px-6 py-10 bg-black/30 backdrop-blur-md text-gray-300 text-sm text-center rounded-t-2xl">
-    <div className="max-w-6xl mx-auto space-y-4">
-      <h3 className="text-white text-xl font-semibold tracking-wide">JourneyAI</h3>
-      <p className="text-gray-400">Redefining how product teams map and optimize customer journeys using AI.</p>
-      <div className="flex justify-center gap-6 text-sm">
-        <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-white transition duration-300">
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-white transition duration-300">
-          LinkedIn
-        </a>
-        <a href="#about" className="hover:underline hover:text-white transition duration-300">
-          About
-        </a>
-      </div>
-      <div className="pt-4 text-gray-500 text-xs">
-        © {new Date().getFullYear()} JourneyAI · All rights reserved
-      </div>
-    </div>
-  </footer>
-);
+export default function Footer() {
+  return (
+    <footer className="bg-gray-100 py-12 mt-20">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+        <div className="text-left mb-6 sm:mb-0">
+          <h2 className="text-xl font-bold text-gray-900">
+            Journey<span className="text-orange-500">AI</span>
+          </h2>
+          <p className="text-gray-600 mt-2 max-w-sm">
+            Redefining how product teams map and optimize customer journeys using AI.
+          </p>
+          <p className="text-gray-400 text-sm mt-4">© 2025 JourneyAI · All rights reserved</p>
+        </div>
 
-export default Footer; 
+        <div className="flex items-center gap-8">
+          <div className="flex space-x-6 text-gray-600">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">About</a>
+          </div>
+          <img
+            src="/assets/footer-illustration.svg"
+            alt="Illustration"
+            className="w-28 sm:w-32 md:w-36"
+          />
+        </div>
+      </div>
+    </footer>
+  );
+} 

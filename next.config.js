@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  reactStrictMode: true,
   output: 'export',
-  basePath: '/journeyai-studio',
-  images: {
-    unoptimized: true,
-  },
+  assetPrefix: isProd ? '/journeyai-studio/' : '',
+  basePath: isProd ? '/journeyai-studio' : '',
 };
 
 module.exports = nextConfig; 
