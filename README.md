@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JourneyAI – Decode Emotions, Map Experiences
 
-## Getting Started
+> Helping teams turn emotional friction into product clarity.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Why JourneyAI?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Modern product journeys are broken.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Users don’t just click. They feel.  
+They hesitate, get overwhelmed, abandon sign-ups, or churn silently.  
+Yet most analytics tools treat these emotional signals as noise.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**JourneyAI** was created to fix this.
 
-## Learn More
+We built a smart visual tool that helps teams:
+- Map the user journey from Awareness to Conversion
+- Identify emotional friction points
+- Understand hidden patterns through emotion-tagged insights
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### What’s the Essence?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+JourneyAI isn’t just a static journey map — it’s **emotion-aware**.  
+It surfaces friction triggers like:
+- 😕 Confusing onboarding
+- 😠 Frustrating pricing models
+- 😐 Feature overload
 
-## Deploy on Vercel
+It empowers product managers, UX researchers, and growth teams to **design with empathy**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### What Can You Do?
+
+✅ Input a user journey (natural language)  
+✅ Instantly visualize emotional triggers  
+✅ Highlight bottlenecks and clarity gaps  
+✅ Export the map for your team or reports  
+
+---
+
+### Try It Out
+
+The tool is live and in early-access phase.  
+**[👉 Launch the Web App]()** *(insert your site link here)*
+
+---
+
+### We Want Feedback
+
+This is just the start.  
+We're gathering real feedback to shape JourneyAI into a next-gen decision layer for product teams.
+
+💬 [Submit feedback here](#)  
+🐛 [Found a bug? File an issue](#)
+
+Let’s make products more human.
+
+— Team JourneyAI
